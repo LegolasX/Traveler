@@ -1,5 +1,5 @@
 //
-//  FirstVCDetail.swift
+//  WebviewController.swift
 //  Travellers
 //
 //  Created by Legolas.Invoker on 2017/4/8.
@@ -8,22 +8,26 @@
 
 import UIKit
 
-class FirstVCDetail: UIViewController ,UIWebViewDelegate{
+class WebviewController: UIViewController ,UIWebViewDelegate{
 
     @IBOutlet weak var webView: UIWebView!
     var url:String? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hidesBottomBarWhenPushed = true
         webView.isOpaque = true
-        if let url = self.url {
-//            let urlReal = url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
-            if let urlobj = URL.init(string: url) {
-                let request = URLRequest(url:urlobj)
-                webView.loadRequest(request)
-            }
-            webView.delegate = self
-            
+        guard let url = self.url else {
+            return
         }
+        let nsurl = url as NSString
+        let urlReal = nsurl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        if let urlobj = URL.init(string: urlReal!) {
+            let request = URLRequest(url:urlobj)
+            webView.loadRequest(request)
+        }
+        webView.delegate = self
+            
+        
     }
 
     override func didReceiveMemoryWarning() {
