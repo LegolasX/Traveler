@@ -15,6 +15,14 @@ class UserCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+//        if self = super.init(style: style, reuseIdentifier: reuseIdentifier) {
+//            userImage.layer.cornerRadius = userImage.frame.size.width / 2
+//            userImage.layer.masksToBounds = true
+//            userImage.clipsToBounds = true
+//        }
+//        return self
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

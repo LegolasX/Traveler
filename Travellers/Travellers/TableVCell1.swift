@@ -17,7 +17,7 @@ class TableVCell1: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
                // self.automaticallyAdjustsScrollViewInsets = false// dan
-
+        
     }
 
     

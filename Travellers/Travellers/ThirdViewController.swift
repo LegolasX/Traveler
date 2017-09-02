@@ -64,6 +64,15 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let ivc = segue.destination as? FirstVCDetail {
+            ivc.url = "https://m.amap.com/search/view/adcode=110000&longitude=116.309692&latitude=40.08925&user_loc=116.309692%2C40.08925&city=北京市&cityCode=110000&location=北京市昌平区北农路2号&keywords=美食&type=nearby"
+            ivc.hidesBottomBarWhenPushed = true
+        }
+    }
+
     
 
 }

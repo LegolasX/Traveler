@@ -19,9 +19,13 @@ extension UIImage
     
 }
 extension CGSize {
+    init(_ width:Int, _ height:Int)  {
+        self.init(width : width, height : height)
+    }
     init(_ width:CGFloat, _ height:CGFloat)  {
         self.init(width : width, height : height)
     }
+    
     
 }
 extension CGRect {

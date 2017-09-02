@@ -15,7 +15,9 @@ class TableVCell2: UITableViewCell {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var headLine: UILabel!
     @IBOutlet weak var body: UILabel!
-    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var viewersLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,5 +29,6 @@ class TableVCell2: UITableViewCell {
 
         // Configure the view for the selected state
 }
+    
 
 }

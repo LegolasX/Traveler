@@ -39,7 +39,6 @@ class FourthViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         //如何设置navBar为透明
 //        let transparentPixel = UIImage(named: "TransparentPixel")
@@ -56,6 +55,7 @@ class FourthViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return 1
@@ -101,6 +101,13 @@ class FourthViewController: UITableViewController {
         }
         return cell
     
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            let vc = AudiosViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     /*

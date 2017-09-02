@@ -38,7 +38,17 @@ extension UIImage {
         case image2 = "image2"
         case image3 = "image3"
         case image4 = "image4"
-        
+        case eye = "eye"
+        case head = "head"
+        case p1 = "1"
+        case p2 = "2"
+        case p3 = "3"
+        case p4 = "4"
+        case p5 = "5"
+        case new1 = "new1"
+        case new2 = "new2"
+        case play = "play"
+        case stop = "stop"
         var image: UIImage {
             return UIImage(asset: self)
         }
