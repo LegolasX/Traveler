@@ -16,6 +16,21 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
     struct Sources {
         static let labelNames = [["美食","酒吧","咖啡"] ,["博物馆","歌剧院","夜店"],["酒店","出租车","地图"]]
         static let images = [[LRAsset.food.image, LRAsset.bar.image, LRAsset.coffee.image], [LRAsset.museum.image, LRAsset.opera.image, LRAsset.disco.image], [LRAsset.hotel.image, LRAsset.taxi.image, LRAsset.map.image]]
+        static let urls = [
+            [
+                "https://m.amap.com/search/view/adcode=110000&longitude=116.309692&latitude=40.08925&user_loc=116.309692%2C40.08925&city=北京市&cityCode=110000&location=北京市昌平区北农路2号&keywords=美食&type=nearby",
+                "https://m.amap.com/search/view/keywords=酒吧&type=nearby&user_loc=116.312804%2C40.088445",
+                "https://m.amap.com/search/view/keywords=咖啡厅&type=nearby&user_loc=116.312804%2C40.088445"],
+            [
+                "https://m.amap.com/search/view/keywords=博物馆&type=nearby&user_loc=116.312804%2C40.088445",
+                "https://m.amap.com/search/view/keywords=歌剧院&type=nearby&user_loc=116.312804%2C40.088445",
+                "https://m.amap.com/search/view/keywords=KTV&type=nearby&user_loc=116.312804%2C40.088445"],
+            [
+                "https://m.amap.com/search/view/keywords=酒店&type=nearby&user_loc=116.312804%2C40.088445",
+                "https://m.amap.com/search/view/keywords=地铁站&type=nearby&user_loc=116.312804%2C40.088445",
+                "https://m.amap.com/search/mapview/keywords=地铁站&type=nearby&user_loc=116.312804%2C40.088445&cluster_state=5&pagenum=1"
+            ]
+        ]
     }
     
     override func viewDidLoad() {
@@ -23,13 +38,11 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
         collection.dataSource = self
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(100,150)
-        
         layout.sectionInset = UIEdgeInsets(top: 30, left: 20, bottom: 10, right: 20)
-        
         collection.setCollectionViewLayout(layout, animated: false)
         
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         for subView in searchBar.subviews  {//此处是在修改searchBar 的背景颜色
             for subsubView in subView.subviews  {
@@ -60,19 +73,16 @@ class ThirdViewController: UIViewController,UICollectionViewDataSource,UICollect
             cell.label.text = Sources.labelNames[indexPath.section][indexPath.row]
             return cell
         }
-        let cell = UICollectionViewCell()
-        return cell
+        return UICollectionViewCell()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if let ivc = segue.destination as? FirstVCDetail {
-            ivc.url = "https://m.amap.com/search/view/adcode=110000&longitude=116.309692&latitude=40.08925&user_loc=116.309692%2C40.08925&city=北京市&cityCode=110000&location=北京市昌平区北农路2号&keywords=美食&type=nearby"
-            ivc.hidesBottomBarWhenPushed = true
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "web") as! WebviewController
+        vc.url = Sources.urls[indexPath.section][indexPath.row]
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController!.pushViewController(vc, animated: true)
     }
-
     
-
+    
 }

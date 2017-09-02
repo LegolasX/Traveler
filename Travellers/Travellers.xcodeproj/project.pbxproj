@@ -61,7 +61,7 @@
 		A0EB72A71E8904E30073A955 /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = A0EB72A61E8904E30073A955 /* favorites.png */; };
 		A0EB72A91E8914BB0073A955 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB72A81E8914BB0073A955 /* Images.swift */; };
 		A0F3964E1EC8E4F200E3136B /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0F3964D1EC8E4F200E3136B /* 4.mp3 */; };
-		A0F97FC51E98C9FF005541AD /* FirstVCDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F97FC41E98C9FF005541AD /* FirstVCDetail.swift */; };
+		A0F97FC51E98C9FF005541AD /* WebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F97FC41E98C9FF005541AD /* WebviewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,7 +121,7 @@
 		A0EB72A61E8904E30073A955 /* favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorites.png; sourceTree = "<group>"; };
 		A0EB72A81E8914BB0073A955 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		A0F3964D1EC8E4F200E3136B /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
-		A0F97FC41E98C9FF005541AD /* FirstVCDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVCDetail.swift; sourceTree = "<group>"; };
+		A0F97FC41E98C9FF005541AD /* WebviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebviewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +170,7 @@
 				A085001D1E9398A300FA93EF /* MyTabViewController.swift */,
 				A08500171E93715D00FA93EF /* Extension.swift */,
 				A0EB72A81E8914BB0073A955 /* Images.swift */,
+				A0F97FC41E98C9FF005541AD /* WebviewController.swift */,
 				A0EB72AA1E8919DB0073A955 /* First */,
 				A094CB321E4B14BC0024388E /* SecondViewController.swift */,
 				A094CB341E4B14C80024388E /* ThirdViewController.swift */,
@@ -213,7 +214,7 @@
 			path = Travellers;
 			sourceTree = "<group>";
 		};
-		A0D504831ED972E0003E2984 /* New Group */ = {
+		A0D504831ED972E0003E2984 /* City Picker */ = {
 			isa = PBXGroup;
 			children = (
 				A0D504841ED972EA003E2984 /* cities.plist */,
@@ -227,14 +228,13 @@
 				A0D5048C1ED972EA003E2984 /* String+SoolyCitySelector.swift */,
 				A0D5048D1ED972EA003E2984 /* UIColor+Hex.swift */,
 			);
-			name = "New Group";
+			name = "City Picker";
 			sourceTree = "<group>";
 		};
 		A0EB72AA1E8919DB0073A955 /* First */ = {
 			isa = PBXGroup;
 			children = (
-				A0D504831ED972E0003E2984 /* New Group */,
-				A0F97FC41E98C9FF005541AD /* FirstVCDetail.swift */,
+				A0D504831ED972E0003E2984 /* City Picker */,
 				A094CB301E4B14AF0024388E /* FirstViewController.swift */,
 				A0941D241EDA5F19000B7D43 /* HeaderTableViewCell.swift */,
 				A08500251E966C8D00FA93EF /* TableVCell1.swift */,
@@ -344,7 +344,7 @@
 			files = (
 				28F0D7FA1F580BA100E35DDE /* TableViewCellPlayer.swift in Sources */,
 				A006F8991E81254200D5DC0B /* ThirdCVCell.swift in Sources */,
-				A0F97FC51E98C9FF005541AD /* FirstVCDetail.swift in Sources */,
+				A0F97FC51E98C9FF005541AD /* WebviewController.swift in Sources */,
 				A0D504821ED97030003E2984 /* PopViewController.swift in Sources */,
 				A0D504971ED972EA003E2984 /* UIColor+Hex.swift in Sources */,
 				A085001C1E93897A00FA93EF /* SettingCell.swift in Sources */,

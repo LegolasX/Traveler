@@ -49,6 +49,7 @@ extension UIImage {
         case new2 = "new2"
         case play = "play"
         case stop = "stop"
+        case defaultAvatar = "avatar1"
         var image: UIImage {
             return UIImage(asset: self)
         }

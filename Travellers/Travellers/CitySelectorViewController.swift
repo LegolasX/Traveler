@@ -68,9 +68,7 @@ class CitySelectorViewController: UIViewController {
         setupUI()
     }
     
-    var callBack: () -> String = {
-        return "湖南"
-    }
+    var callBack: ((String) -> Void)?
     
     private func setupUI() {
         
@@ -105,7 +103,6 @@ class CitySelectorViewController: UIViewController {
     
     deinit {
         print("我走了")
-        callBack()
     }
 
 }
@@ -182,6 +179,10 @@ extension CitySelectorViewController: UITableViewDataSource, UITableViewDelegate
         tableView.deselectRow(at: indexPath, animated: false)
         let cell = tableView.cellForRow(at: indexPath)
         print("点击了 \(cell?.textLabel?.text ?? "")")
+        if let b = callBack {
+            b(cell?.textLabel?.text ?? "北京")
+        }
+        
     }
     
     // MARK: 右边索引

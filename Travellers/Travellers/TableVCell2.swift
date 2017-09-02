@@ -10,7 +10,15 @@ import UIKit
 
 class TableVCell2: UITableViewCell {
 
-
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var headLine: UILabel!
@@ -22,6 +30,16 @@ class TableVCell2: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        for v  in self.contentView.subviews {
+            for cons in v.constraints {
+                print(cons.secondItem)
+                if cons.secondItem as! UIView == self.contentView {
+                    print(cons)
+                }
+            }
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

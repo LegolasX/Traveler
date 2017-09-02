@@ -105,7 +105,6 @@
                                         <connections>
                                             <outlet property="image" destination="RVV-gF-2kq" id="utG-ck-vrq"/>
                                             <outlet property="label" destination="ixL-SR-GCx" id="IuU-tv-fUK"/>
-                                            <segue destination="idN-3v-z7K" kind="show" identifier="ii" id="nmk-Wz-bBQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -431,7 +430,7 @@
                                                         <constraint firstItem="Qeg-oa-uRB" firstAttribute="top" secondItem="rUN-uS-ITn" secondAttribute="top" id="ZGV-CN-zJy"/>
                                                     </constraints>
                                                 </stackView>
-                                                <view contentMode="scaleToFill" verticalHuggingPriority="240" verticalCompressionResistancePriority="900" translatesAutoresizingMaskIntoConstraints="NO" id="pEN-f3-jFo">
+                                                <view contentMode="scaleToFill" verticalHuggingPriority="240" verticalCompressionResistancePriority="900" translatesAutoresizingMaskIntoConstraints="NO" id="pEN-f3-jFo" userLabel="userView">
                                                     <rect key="frame" x="15" y="178" width="345" height="21"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-uX-CxG">
@@ -567,10 +566,10 @@
             </objects>
             <point key="canvasLocation" x="3838" y="-1321"/>
         </scene>
-        <!--FirstVC Detail-->
+        <!--Webview Controller-->
         <scene sceneID="n4c-Z7-W66">
             <objects>
-                <viewController storyboardIdentifier="wa" id="idN-3v-z7K" customClass="FirstVCDetail" customModule="Travellers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="web" id="idN-3v-z7K" customClass="WebviewController" customModule="Travellers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jnY-DF-AVF"/>
                         <viewControllerLayoutGuide type="bottom" id="lZk-bv-Z4R"/>
@@ -729,7 +728,4 @@
         <image name="屏幕快照 2017-04-21 上午11.10.01.png" width="762" height="1096"/>
         <image name="礼堂.jpeg" width="960" height="640"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nmk-Wz-bBQ"/>
-    </inferredMetricsTieBreakers>
 </document>

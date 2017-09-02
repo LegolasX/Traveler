@@ -13,8 +13,24 @@ extension UIImage
     func resizedImage(withSize newSize:CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
         draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         return newImage!
+    }
+    func kt_drawRectWithRoundedCorner(radius: CGFloat, _ sizetoFit: CGSize) -> UIImage {
+        let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: sizetoFit)
+        
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)
+        UIGraphicsGetCurrentContext()!.addPath(UIBezierPath(roundedRect: rect, byRoundingCorners: UIRectCorner.allCorners,
+                                      cornerRadii: CGSize(width: radius, height: radius)).cgPath)
+        UIGraphicsGetCurrentContext()?.clip()
+        
+        self.draw(in: rect)
+        UIGraphicsGetCurrentContext()!.drawPath(using: .fillStroke)
+        let output = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return output!
     }
     
 }
