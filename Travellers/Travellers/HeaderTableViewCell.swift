@@ -12,9 +12,13 @@ import AVFoundation
 class HeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var containerView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        containerView.backgroundColor = UIColor.mainBgColor
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

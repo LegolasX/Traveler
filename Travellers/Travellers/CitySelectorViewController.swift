@@ -153,17 +153,30 @@ extension CitySelectorViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: currentCell, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: currentCell, for: indexPath) as! CurrentCityTableViewCell
             cell.backgroundColor = cellColor
+            if let b = callBack {
+                cell.callBack = {  city in
+                    b(city)
+                }
+            }
             return cell
             
         }else if indexPath.section == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: recentCell, for: indexPath) as! RecentCitiesTableViewCell
+            
             return cell
         }else if indexPath.section == 2 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: hotCityCell, for: indexPath) as! HotCityTableViewCell
+            if let b = callBack {
+                cell.callBack = {  city in
+                    b(city)
+                }
+            }
+            
+            
             return cell
         }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: nomalCell, for: indexPath)

@@ -27,10 +27,7 @@ class HotCityTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var callBack : ()->String = {
-        return "北京"
-    }
-    
+    var callBack: ((String) -> Void)?
     private func setupUI() {
         
         self.backgroundColor = cellColor
@@ -58,8 +55,8 @@ class HotCityTableViewCell: UITableViewCell {
     
     @objc private func btnClick(btn: UIButton) {
         print(btn.titleLabel!.text!)
-        self.callBack = {
-            return btn.titleLabel!.text!
+        if let c = self.callBack {
+            c(btn.titleLabel!.text!)
         }
         
     }

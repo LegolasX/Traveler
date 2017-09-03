@@ -26,19 +26,26 @@ class TableVCell2: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var viewersLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var topContainer: UIView!
+    @IBOutlet weak var separatarView: UIView!
+    @IBOutlet weak var userContariner: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        for v  in self.contentView.subviews {
-            for cons in v.constraints {
-                print(cons.secondItem)
-                if cons.secondItem as! UIView == self.contentView {
-                    print(cons)
-                }
-            }
-        }
+        self.contentView.backgroundColor = UIColor.mainBgColor
+        containerView.layer.cornerRadius = 5
+        containerView.layer.masksToBounds = true
+        containerView.clipsToBounds = true
+        containerView.backgroundColor = UIColor.white
+        userContariner.backgroundColor = UIColor.white
+        topContainer.backgroundColor = UIColor.white
+        separatarView.backgroundColor = UIColor.mainBgColor
+        headLine.textColor = UIColor.myBlack
+        myImageView.clipsToBounds = true
+        myImageView.layer.cornerRadius = 2
+        myImageView.layer.masksToBounds = true
         
     }
 

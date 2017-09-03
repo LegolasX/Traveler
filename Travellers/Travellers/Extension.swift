@@ -49,18 +49,3 @@ extension CGRect {
         self.init(x: x, y: y, width: width, height: height)
     }
 }
-extension UIColor {
-    class var myBlue:UIColor {
-        return UIColor(colorLiteralRed: 0.41, green: 0.83, blue: 0.93, alpha: 1)
-    }
-    func toImage() -> UIImage {
-        let rect = CGRect(0,0,100,100)
-        UIGraphicsBeginImageContext(rect.size);
-        let context = UIGraphicsGetCurrentContext();
-        context?.setFillColor(self.cgColor)
-        context?.fill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext();
-        return image!;
-    }
-}

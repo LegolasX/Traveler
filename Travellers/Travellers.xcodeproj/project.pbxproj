@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2813F5CB1F4B216600399EE1 /* AudiosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813F5CA1F4B216600399EE1 /* AudiosViewController.swift */; };
+		28ED1A5E1F5AEFA50032A8A9 /* UIColor + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED1A5D1F5AEFA50032A8A9 /* UIColor + extension.swift */; };
+		28ED1A601F5AF9E60032A8A9 /* cell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED1A5F1F5AF9E60032A8A9 /* cell3.swift */; };
 		28F0D7FA1F580BA100E35DDE /* TableViewCellPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0D7F91F580BA100E35DDE /* TableViewCellPlayer.swift */; };
 		28F0D7FC1F58270500E35DDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0D7FB1F58270500E35DDE /* Assets.xcassets */; };
 		A006F8991E81254200D5DC0B /* ThirdCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006F8981E81254200D5DC0B /* ThirdCVCell.swift */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		2813F5CA1F4B216600399EE1 /* AudiosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiosViewController.swift; sourceTree = "<group>"; };
+		28ED1A5D1F5AEFA50032A8A9 /* UIColor + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + extension.swift"; sourceTree = "<group>"; };
+		28ED1A5F1F5AF9E60032A8A9 /* cell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell3.swift; sourceTree = "<group>"; };
 		28F0D7F91F580BA100E35DDE /* TableViewCellPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPlayer.swift; sourceTree = "<group>"; };
 		28F0D7FB1F58270500E35DDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A006F8981E81254200D5DC0B /* ThirdCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdCVCell.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				A085001D1E9398A300FA93EF /* MyTabViewController.swift */,
 				A08500171E93715D00FA93EF /* Extension.swift */,
 				A0EB72A81E8914BB0073A955 /* Images.swift */,
+				28ED1A5D1F5AEFA50032A8A9 /* UIColor + extension.swift */,
 				A0F97FC41E98C9FF005541AD /* WebviewController.swift */,
 				A0EB72AA1E8919DB0073A955 /* First */,
 				A094CB321E4B14BC0024388E /* SecondViewController.swift */,
@@ -234,6 +239,7 @@
 		A0EB72AA1E8919DB0073A955 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				28ED1A5F1F5AF9E60032A8A9 /* cell3.swift */,
 				A0D504831ED972E0003E2984 /* City Picker */,
 				A094CB301E4B14AF0024388E /* FirstViewController.swift */,
 				A0941D241EDA5F19000B7D43 /* HeaderTableViewCell.swift */,
@@ -346,6 +352,7 @@
 				A006F8991E81254200D5DC0B /* ThirdCVCell.swift in Sources */,
 				A0F97FC51E98C9FF005541AD /* WebviewController.swift in Sources */,
 				A0D504821ED97030003E2984 /* PopViewController.swift in Sources */,
+				28ED1A5E1F5AEFA50032A8A9 /* UIColor + extension.swift in Sources */,
 				A0D504971ED972EA003E2984 /* UIColor+Hex.swift in Sources */,
 				A085001C1E93897A00FA93EF /* SettingCell.swift in Sources */,
 				A08500241E966C5200FA93EF /* CollectionVCCell.swift in Sources */,
@@ -366,6 +373,7 @@
 				A0D504951ED972EA003E2984 /* ResultTableViewController.swift in Sources */,
 				A0EB72A91E8914BB0073A955 /* Images.swift in Sources */,
 				A0D504941ED972EA003E2984 /* RecentCitiesableViewCell.swift in Sources */,
+				28ED1A601F5AF9E60032A8A9 /* cell3.swift in Sources */,
 				A08500281E966C9B00FA93EF /* TableVCell2.swift in Sources */,
 				A085001E1E9398A300FA93EF /* MyTabViewController.swift in Sources */,
 				A0941D251EDA5F19000B7D43 /* HeaderTableViewCell.swift in Sources */,
